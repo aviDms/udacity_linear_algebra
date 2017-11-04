@@ -99,6 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+<<<<<<< HEAD
 
 # pycharm
 .idea/
+=======
+>>>>>>> c24782a5b283130deb50b452806fef297f44ca82
