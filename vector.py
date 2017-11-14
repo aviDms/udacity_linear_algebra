@@ -8,7 +8,7 @@ DEFAULT_TOLERANCE = 1e-10
 
 '''
 ISSUES
-* assumes all vectors start from origin
+* assumes all vectors start from origin 0
 '''
 
 
@@ -285,3 +285,23 @@ class Vector(object):
         :return: all coordinates of the vector, comma separated, as string
         """
         return '[{0}]'.format(', '.join(map(str, self.coordinates)))
+
+
+def cross_product(v1: Vector, v2: Vector) -> Vector:
+    """
+    Calculate the cross product of 2 3D vectors.
+
+    ! only supports 3D vectors.
+
+    :param v1: first vector
+    :param v2: second vector
+    :return: resulting vector
+    """
+    v = v1.coordinates
+    w = v2.coordinates
+
+    x = v[1] * w[2] - w[1] * v[2]
+    y = -(v[0] * w[2] - w[0] * v[2])
+    z = v[0] * w[1] - w[0] * v[1]
+
+    return Vector([x, y, z])

@@ -1,4 +1,4 @@
-from vector import Vector
+from vector import *
 
 a = Vector([1, 1])
 b = Vector([3, 3])
@@ -103,3 +103,14 @@ b = Vector([6.404, -9.144, 2.759, 8.718])
 print(v.component_orthogonal_to(b))
 print(v.component_parallel_to(b))
 
+
+# 13 Cross Product
+v = Vector([8.462, 7.893, -8.187])
+w = Vector([6.984, -5.975, 4.778])
+x = cross_product(v, w)
+
+print(x)
+print(x.magnitude)
+print(x.magnitude / 2)
+
+print(sqrt(11.205 ** 2 + 97.609 ** 2 + 105.685 ** 2))
